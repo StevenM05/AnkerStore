@@ -1,0 +1,22 @@
+{
+    "name": "anker/tienda",
+    "description": "creacion de una tienda",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Steven Mosquera Hillón"
+        },
+        {
+            "name": "Miguel Mosquera"
+        }
+    ],
+    "requiere":{
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Anker\\":"src/"
+        }
+    }
+}   
