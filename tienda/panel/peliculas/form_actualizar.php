@@ -103,7 +103,20 @@
                           <label>Categorias</label>
                           <select class="form-control" name="categoria_id" required>
                             <option value="">--SELECCIONE--</option>
-                            <option value="1">ACCION</option>
+                            <?php
+                              require '../../vendor/autoload.php';
+                              $categoria = new Anker\Categoria;
+                              $info_categoria = $categoria->mostrar();
+                              $cantidad = count($info_categoria);
+                              for($x = 0; $x < $cantidad;$x++){
+                                $item = $info_categoria[$x];
+                            ?>
+                              <option value="<?php print $item['id'] ?>"
+                              <?php print $resultado['categoria_id'] == $item['id'] ?'selected':''?>
+                              ><?php print $item['nombre'] ?></option>
+                            <?php 
+                              }
+                            ?>
                           </select>
                       </div>
                   </div>

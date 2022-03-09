@@ -76,6 +76,15 @@ else
 
 }
 
+if($_SERVER['REQUEST_METHOD'] ==='GET'){
+    $id = $_GET['id'];
+    $rpt = $pelicula->eliminar($id);
+
+        if($rpt)
+            header('Location: peliculas/index.php');
+        else
+        print 'Error al eliminar';
+}
 
 function subirFoto() {
 
